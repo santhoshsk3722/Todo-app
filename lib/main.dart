@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/Screens/homepage.dart';
+import 'package:todo_app/Screens/navbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -104,7 +104,7 @@ class _LoginPageState extends State<LoginPage> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Homepage()),
+                      MaterialPageRoute(builder: (context) => MyApp()),
                     );
                   },
                   child: Text(

@@ -121,7 +121,7 @@ class _HomepageState extends State<Homepage> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    "Center Container",
+                    "Welcome to the To-Do App",
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
@@ -134,13 +134,17 @@ class _HomepageState extends State<Homepage> {
                   itemCount: items.length,
                   itemBuilder: (context, index) {
                     return ListTile(
-                      title: Text(items[index]),
+                      title: Text("To-Do"),
                       subtitle: Text(sub[index]),
                       trailing: IconButton(
                         icon: const Icon(Icons.delete, color: Colors.red),
                         onPressed: () {
                           _deleteTodoItem(index);
                         },
+                      ),
+                      leading: CircleAvatar(
+                        backgroundColor: Colors.blueAccent,
+                        child: Text("${index + 1}"),
                       ),
                     );
                   },
@@ -156,6 +160,7 @@ class _HomepageState extends State<Homepage> {
           backgroundColor: Colors.white,
           child: Icon(Icons.add, color: Colors.black),
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       ),
     );
   }
